@@ -1,0 +1,33 @@
+.toolbar {
+    background: #1f2937;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 14px;
+    font-family: Inter, system-ui, Arial, sans-serif
+}
+
+.toolbar button {
+    background: #fff;
+    color: #111;
+    border: 0;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer
+}
+
+.toolbar button.active {
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15)
+}
+
+.toolbar button.toolbar-close {
+    margin-left: auto;
+    background: transparent;
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.08)
+}
+
+.error-message {
+    color: crimson;
+}

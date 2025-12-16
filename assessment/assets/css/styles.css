@@ -1,0 +1,49 @@
+html {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.dynamic-div ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dynamic-div li {
+    margin: 6px 0;
+}
+
+.garage-bullet {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.garage-color {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.car-item {
+    cursor: pointer;
+}
+.dynamic-div .car-item:hover {
+    background-color: rgba(59, 130, 246, 0.06);
+}
+.car-item:focus {
+    outline: 2px solid rgba(59,130,246,0.18);
+    outline-offset: 2px;
+}
+
+.error-message {
+    color: crimson;
+}
