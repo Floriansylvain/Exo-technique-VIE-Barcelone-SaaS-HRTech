@@ -1,5 +1,7 @@
 # Exo technique VIE - Barcelone SaaS HRTech
 
+## Demo: [exo-technique-vie-barcelone-hrtech.floriansylvain.fr](https://exo-technique-vie-barcelone-hrtech.floriansylvain.fr/)
+
 ## Risques identifiés
 
 - Code arbitraire via inclusion dynamique insuffisamment validée (voir `src/ajax_handler.php`; inclusion de `customs/[client]/modules/[module]/[script].php`)
