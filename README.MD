@@ -1,3 +1,5 @@
+# Exo technique VIE - Barcelone SaaS HRTech
+
 ## Risques identifiés
 
 - Code arbitraire via inclusion dynamique insuffisamment validée (voir `src/ajax_handler.php`; inclusion de `customs/[client]/modules/[module]/[script].php`)
@@ -24,7 +26,7 @@
 
 Petit soucis:
 
-```
+```md
 Pour toutes les voitures qui ont plus de 10 ans, appliquer une couleur rouge sur la vue liste afin de les identifier rapidement.Pour celles qui ont moins de deux ans, appliquer une couleur verte.
 ```
 
