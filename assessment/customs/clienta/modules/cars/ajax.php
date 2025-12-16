@@ -11,20 +11,33 @@ $cars = DataManager::getCars('clienta');
 			<?php
 				$yearRaw = $car['year'] ?? null;
 				$date = '-';
+				$yearInt = null;
+				$currentYear = (int)date('Y');
 				if ($yearRaw !== null && $yearRaw !== '') {
 					$yr = (int)$yearRaw;
-					$currentYear = (int)date('Y');
 					if ($yr >= 1900 && $yr <= $currentYear + 1) {
 						$date = (string)$yr;
+						$yearInt = $yr;
 					} else {
 						$ts = (int)$yearRaw;
-						if ($ts > 0) $date = date('d/m/Y', $ts);
-						else $date = (string)$yearRaw;
+						if ($ts > 0) {
+							$date = date('d/m/Y', $ts);
+							$yearInt = (int)date('Y', $ts);
+						} else {
+							$date = (string)$yearRaw;
+						}
 					}
+				}
+				$ageClass = '';
+				if ($yearInt !== null) {
+					$age = $currentYear - $yearInt;
+					if ($age > 10) $ageClass = 'car-old';
+					elseif ($age < 2) $ageClass = 'car-new';
+                    // aucune voiture dans le jeu de test n'a moins de 2 ans ou plus de 10 ans ^^"
 				}
 			?>
 
-			<li class="car-item" data-car-id="<?php echo htmlspecialchars($car['id'] ?? ''); ?>">
+			<li class="car-item <?php echo $ageClass; ?>" data-car-id="<?php echo htmlspecialchars($car['id'] ?? ''); ?>">
 				<strong><?php echo htmlspecialchars($car['modelName'] ?? '-'); ?></strong>
 				- <?php echo htmlspecialchars($car['brand'] ?? '-'); ?>
 				(<?php echo $date; ?>)

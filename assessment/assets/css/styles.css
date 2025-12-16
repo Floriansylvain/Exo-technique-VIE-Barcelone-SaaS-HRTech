@@ -44,6 +44,14 @@ body {
     outline-offset: 2px;
 }
 
+.car-old {
+    color: crimson;
+}
+
+.car-new {
+    color: green;
+}
+
 .error-message {
     color: crimson;
 }
